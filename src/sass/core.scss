@@ -1,0 +1,34 @@
+/* Arquivo SCSS Principal */
+
+//Fontes
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('../fonts/JosefinSans-Light.ttf') format('truetype'),
+        url('../fonts/JosefinSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('../fonts/RobotoSlab-Regular.ttf') format('truetype');
+}
+
+// Biblioteca de media queries
+@import "include-media";
+
+// Base 
+@import "variables";
+
+// Componentes
+@import "support";
+
+// Arquivo principal com o estilo do site
+@import "default-site";
+
+// Estilo responsivo para telas pequenas
+@import "responsive-mobile";
+
+// Estilo responsivo para telas médias
+@import "responsive-tablet";
+
+// Estilo responsivo para telas grandes ou maiores
+@import "responsive-desktop";

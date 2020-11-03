@@ -1,0 +1,42 @@
+$font-style: normal;
+$font-variant: normal;
+$font-weight: 300;
+$font-color: #666669;
+$font-color-light: lighten($font-color, 25%);
+$font-color-primary: #105672;
+$font-color-highlight: #00c6a8;
+$font-size: 1.1em;
+$line-height: 1.5;
+$font-family: 'Josefin Sans', sans-serif;
+$font-family-roboto: 'Roboto Slab', serif;
+
+
+$background-site-color: white;
+$header-hight: 80px;
+$desktop-margin: 100px;
+$mobile-margin: 30px;
+$transition: .4s ease;
+
+
+// Mixins
+@mixin text-stroke($color, $weight: 1px) {
+    text-shadow:
+        -#{$weight} -#{$weight} 1px $color,  
+        #{$weight} -#{$weight} 1px $color,
+        -#{$weight} #{$weight} 1px $color,
+        #{$weight} #{$weight} 1px $color,
+        0 0 #{$weight * 2} $color;
+}
+
+@mixin shaddow($color: $font-color-primary, $rad: 1px, $x: 0, $y: 0) {
+    text-shadow: $x $y $rad $color;
+}
+
+@mixin transition($properties...) {
+    $transitions: ();
+    @each $prop in $properties {
+        $transitions: append($transitions, $prop $transition , comma );
+    }
+    
+    transition: $transitions;
+}

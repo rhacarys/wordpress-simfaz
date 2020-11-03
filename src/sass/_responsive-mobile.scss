@@ -1,0 +1,125 @@
+@include media("<tablet") {
+    .site-header {
+        margin: 0;
+        height: auto;
+
+        .site-logo img {
+            height: 45px;
+        }
+
+        .site-menu-toggler {
+            display: block;
+        }
+        
+        .site-logo, .site-menu-toggler {
+            margin: 0 30px;
+            z-index: 3;
+        }
+
+        .site-menu {
+            flex-direction: column;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            padding-top: 70px;
+            padding-bottom: 20px;
+            background-color: rgba(white, .9);
+            z-index: 2;
+            transform: translateY(-100%);
+            @include transition(transform);
+
+            ul {
+                flex-direction: column;
+                height: auto;
+                padding: 0;
+
+                li {
+                    font-size: 1.5em;
+                    padding: 0 10px;
+                    @include transition(padding);
+                }
+            }
+        }
+
+        .user-menu {
+            padding: 0 10px;
+            margin: auto;
+            @include transition(padding);
+        }
+
+        &.active {
+            .site-logo img {
+                height: 40px;
+                padding-top: 15px;
+            }
+
+            .site-menu {
+                transform: translateY(0);
+
+                ul li {
+                    padding: 10px;
+                }
+            }
+
+            .user-menu {
+                padding: 10px;
+            }
+        }
+    }
+
+    .col-1 {
+        width: 100%;
+
+        .cover {
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: calc(200px + 20%);
+        }
+
+        .container {
+            width: 100%;
+            position: relative;
+            height: auto;
+
+            .data {
+                margin-top: 100px;
+                padding: $mobile-margin;
+
+                .title {
+                    font-size: 1.5em;
+                    padding-bottom: 10px;
+                }
+
+                .description {
+                    font-size: 0.8em;
+                    padding: 0;
+                }
+
+                .button-next-page {
+                    position: fixed;
+                    bottom: 30px;
+                    left: 30px;
+                    z-index: 3;
+                }
+            }
+        }
+    }
+
+    .col-2 {
+        width: 100%;
+
+        .data {
+            padding: 1px $mobile-margin 60px;
+            position: relative;
+            background-color: white;
+            font-size: .9em;
+        }
+
+        .flex-underline div img {
+            width: 25% !important;
+        }
+    }
+
+}
