@@ -1,6 +1,5 @@
 @include media("<tablet") {
     .site-header {
-        margin: 0;
         height: auto;
 
         .site-logo img {
@@ -12,7 +11,7 @@
         }
         
         .site-logo, .site-menu-toggler {
-            margin: 0 30px;
+            position: relative;
             z-index: 3;
         }
 
@@ -100,13 +99,6 @@
                     font-size: 0.8em;
                     padding: 0;
                 }
-
-                .button-next-page {
-                    position: fixed;
-                    bottom: 30px;
-                    left: 30px;
-                    z-index: 3;
-                }
             }
         }
     }
@@ -115,7 +107,7 @@
         width: 100%;
 
         .data {
-            padding: 1px $mobile-margin 60px;
+            padding: 1px $mobile-margin 80px;
             position: relative;
             background-color: white;
             font-size: .9em;
@@ -124,6 +116,11 @@
         .flex-underline div img {
             width: 25% !important;
         }
+    }
+
+    .button-next-page {
+        bottom: 30px;
+        left: $mobile-margin;
     }
 
 }

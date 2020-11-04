@@ -4,11 +4,9 @@
     top: 0;
     left: 0;
     height: $header-hight;
-    width: calc(100% - #{$desktop-margin * 2});
     width: -webkit-fill-available;
     display: flex;
     justify-content: space-between;
-    margin: 0 $desktop-margin;
 
     .site-logo {
         display: block;
@@ -173,7 +171,6 @@
     .data {
         padding-top: 100px;
         max-width: 1024px;
-        padding-left: $desktop-margin;
         
         .title {
             color: $font-color-primary;
@@ -200,26 +197,6 @@
                 color: $font-color-primary;
             }
         }
-
-        .button-next-page {
-            position: absolute;
-            bottom: 30px;
-            right: 40%;
-
-            a.link {
-                width: 30px;
-                height: 30px;
-                display: block;
-                background-size: contain;
-                background-image: url(../img/icon-down.png);
-                @include transition(background-image, transform);
-
-                &:hover {
-                    background-image: url(../img/icon-down-hover.png);
-                    transform: scale(1.6);
-                }
-            }
-        }
     }
 
 }
@@ -242,7 +219,6 @@
         padding-bottom: 40px;
         padding-left: 12px;
         max-width: 1024px;
-        padding-right: $desktop-margin;
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -356,6 +332,74 @@
             font-size: .7em;
             border-width: 1px;
             border-color: $font-color-highlight !important;
+        }
+    }
+}
+
+.button-next-page {
+    position: fixed;
+    bottom: 30px;
+    left: 32%;
+
+    a.link {
+        width: 30px;
+        height: 30px;
+        display: block;
+        background-size: contain;
+        background-image: url(../img/icon-down.png);
+        @include transition(background-image, transform);
+
+        &:hover {
+            background-image: url(../img/icon-down-hover.png);
+            transform: scale(1.6);
+        }
+    }
+}
+
+.social-menu {
+    position: fixed;
+    bottom: 30px;
+    left: 0;
+    padding-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 70%;
+
+    .social-button {
+        padding-right: 20px;
+        padding-top: 10px;
+
+        .social-icon {
+            width: 25px;
+            height: 25px;
+            display: block;
+            background-size: contain;
+            background-repeat: no-repeat;
+            @include transition(background-image, transform);
+            
+            &.site {
+                background-image: url(../img/icon-site.png);
+            }
+            
+            &.facebook {
+                background-image: url(../img/icon-facebook.png);
+            }
+            
+            &.linkedin {
+                background-image: url(../img/icon-linkedin.png);
+            }
+            
+            &.instagram {
+                background-image: url(../img/icon-instagram.png);
+            }
+            
+            &.maps {
+                background-image: url(../img/icon-maps.png);
+            }
+            
+            &:hover {
+                transform: scale(1.5);
+            }
         }
     }
 }

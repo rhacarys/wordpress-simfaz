@@ -11,7 +11,7 @@
 <body <?php body_class(); ?>>
 
     <div class="container full-height"> <!-- Container Global -->
-        <header class="site-header"> <!-- Cabeçalho -->
+        <header class="site-header pad-right pad-left"> <!-- Cabeçalho -->
             <a href="<?php echo home_url(); ?>" class="site-logo"> <!-- Logo do Site -->
                 <?php 
                 $custom_logo_id = get_theme_mod( 'custom_logo' );

@@ -27,6 +27,14 @@ html, body {
     height: 100%;
 }
 
+.pad-left {
+    padding-left: $mobile-margin;
+}
+
+.pad-right {
+    padding-right: $mobile-margin;
+}
+
 .grecaptcha-badge {
     opacity: 0;
     bottom: -300px !important;

@@ -1,38 +1,27 @@
 @include media(">desktop") {
+    .pad-left {
+        padding-left: $mobile-margin;
+    }
+    
+    .pad-right {
+        padding-right: $mobile-margin;
+    }
+
     .desktop-flex {
         display: flex;
     }
     
-    .site-header {
-        margin: 0 #{$desktop-margin / 3};
+    .col-2 .spacer {
+        display: block;
     }
-
-    .col-1 .data {
-        padding-left: $desktop-margin / 3;
-    }
-
-    .col-2 {
-        .spacer {
-            display: block;
-        }
-
-        .data {
-            padding-right: $desktop-margin / 3;
-        }
-    }
-
 }
 
 @include media(">1200px") {
-    .site-header {
-        margin: 0 #{$desktop-margin};
-    }
-
-    .col-1 .data {
+    .pad-left {
         padding-left: $desktop-margin;
     }
-
-    .col-2 .data {
+    
+    .pad-right {
         padding-right: $desktop-margin;
     }
 }
@@ -51,22 +40,21 @@
     html {
         font-size: 1.2em;
     }
-    
-    .site-header {
-        margin: 0 #{$desktop-margin *2};
 
-        .site-menu {
-            padding-left: 15%;
-        }
+    .pad-left {
+        padding-left: $desktop-margin * 2;
+    }
+    
+    .pad-right {
+        padding-right: $desktop-margin * 2;
+    }
+    
+    .site-header .site-menu {
+        padding-left: 15%;
     }
     
     .col-1 .data {
         font-size: 1.1em;
-        padding-left: $desktop-margin * 2;
-    }
-
-    .col-2 .data {
-        padding-right: $desktop-margin * 2;
     }
 }
 
@@ -74,16 +62,12 @@
     html {
         font-size: 1.3em;
     }
-    
-    .site-header {
-        margin: 0 #{$desktop-margin *4};
-    }
-    
-    .col-1 .data {
+
+    .pad-left {
         padding-left: $desktop-margin * 4;
     }
     
-    .col-2 .data {
+    .pad-right {
         padding-right: $desktop-margin * 4;
     }
 }
