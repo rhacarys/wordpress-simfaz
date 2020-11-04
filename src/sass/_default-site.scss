@@ -81,8 +81,8 @@
                 display: flex;
                 color: $font-color;
                 font-weight: 300;
-                @include text-stroke(white);
-                @include transition(color, text-shadow);
+                @include shaddow(white);
+                @include transition(padding, color, text-shadow, transform);
                 
                 &.beta::after {
                     content: "beta";
@@ -97,12 +97,14 @@
 
                 &.current-menu-item {
                     color: $font-color-highlight;
-                    text-shadow: none;
+                    @include shaddow($font-color-highlight);
+                    transform: scale(1.1);
                 }
 
                 &:not(.current-menu-item):hover {
                     color: $font-color-primary;
-                    text-shadow: 0 0 1px $font-color-primary;
+                    @include shaddow();
+                    transform: scale(1.1);
                 }
 
                 a {
@@ -122,6 +124,7 @@
             height: 30px;
             display: block;
             background-size: contain;
+            background-repeat: no-repeat;
             background-image: url(../img/icon-user.png);
             @include transition(background-image);
 
@@ -141,6 +144,7 @@
             height: 30px;
             display: block;
             background-size: contain;
+            background-repeat: no-repeat;
             background-image: url(../img/icon-wpp.png);
             @include transition(background-image);
 
@@ -174,7 +178,7 @@
         .title {
             color: $font-color-primary;
             font-size: 3em;
-            font-weight: 400;
+            font-weight: bold;
             line-height: 1.3;
             text-shadow: 0 0 4px white;
         }

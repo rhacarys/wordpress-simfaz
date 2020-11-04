@@ -24,6 +24,9 @@
             top: 0;
             padding-top: 70px;
             padding-bottom: 20px;
+            box-sizing: border-box;
+            max-height: 100vh;
+            overflow: auto;
             background-color: rgba(white, .9);
             z-index: 2;
             transform: translateY(-100%);
@@ -37,7 +40,6 @@
                 li {
                     font-size: 1.5em;
                     padding: 0 10px;
-                    @include transition(padding);
                 }
             }
         }
@@ -49,6 +51,8 @@
         }
 
         &.active {
+            height: 100%;
+
             .site-logo img {
                 height: 40px;
                 padding-top: 15px;

@@ -32,3 +32,18 @@
 
 // Estilo responsivo para telas grandes ou maiores
 @import "responsive-desktop";
+
+// Estilo das páginas de erro
+.error-container {
+    margin: auto;
+
+    .error-code {
+        font-family: $font-family-roboto;
+        font-size: 5em;
+        line-height: 1em;
+    }
+
+    .error-description {
+        padding-bottom: 20%;
+    }
+}
