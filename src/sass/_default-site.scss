@@ -3,10 +3,16 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: $header-hight;
+  height: $header-hight + 10px;
   width: -webkit-fill-available;
   display: flex;
   justify-content: space-between;
+  background-color: rgba(white, 0);
+  @include transition(background-color);
+
+  &.flat {
+    background-color: rgba(white, 0.9);
+  }
 
   .site-logo {
     display: block;
@@ -203,16 +209,6 @@
 .col-2 {
   width: 50%;
 
-  .spacer {
-    display: none;
-    position: fixed;
-    top: 0;
-    height: $header-hight;
-    width: inherit;
-    z-index: 2;
-    background-color: rgba($background-site-color, 0.8);
-  }
-
   .data {
     padding-top: 200px;
     padding-bottom: 40px;
@@ -283,7 +279,7 @@
     }
 
     img {
-      width: 40% !important;
+      width: 30% !important;
       height: auto;
       display: block;
       margin: auto;

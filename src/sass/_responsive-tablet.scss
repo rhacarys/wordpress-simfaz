@@ -1,60 +1,58 @@
 @include media(">tablet", "<desktop") {
-    .desktop-flex {
-        display: flex;
+  .desktop-flex {
+    display: flex;
+  }
+
+  .site-header {
+    margin: 0;
+    padding: 0 $mobile-margin 10px;
+
+    .site-logo img {
+      height: 35px;
+      padding-top: 15px;
     }
 
-    .site-header {
-        margin: 0;
-        padding: 0 $mobile-margin 10px;
-        background-color: rgba(white, .8);
-
-        .site-logo img {
-            height: 35px;
-            padding-top: 15px;
-        }
-
-        .site-menu > div > ul {
-            position: absolute;
-            left: $mobile-margin;
-            right: $mobile-margin;
-            top: 40px;
-            padding: 0;
-            margin: 0 -12px;
-            justify-content: space-between;
-        }
-
-        .user-menu {
-            padding-top: 20px;
-        }
-
-        .wpp-menu {
-            bottom: 30px;
-            right: 30px;
-        }
-    }
-    
-    .col-1 .data {
-        padding-left: $mobile-margin;
-
-        .title {
-            font-size: 2em;
-        }
-
-        .description {
-            font-size: 1em;
-        }
+    .site-menu > div > ul {
+      position: absolute;
+      left: $mobile-margin;
+      right: $mobile-margin;
+      top: 40px;
+      padding: 0;
+      margin: 0 -12px;
+      justify-content: space-between;
     }
 
-    .col-2 .data {
-        padding-right: $mobile-margin;
-        font-size: .9em;
+    .user-menu {
+      padding-top: 20px;
     }
 
+    .wpp-menu {
+      bottom: 30px;
+      right: 30px;
+    }
+  }
+
+  .col-1 .data {
+    padding-left: $mobile-margin;
+
+    .title {
+      font-size: 2em;
+    }
+
+    .description {
+      font-size: 1em;
+    }
+  }
+
+  .col-2 .data {
+    padding-right: $mobile-margin;
+    font-size: 0.9em;
+  }
 }
 
 @include media(">600px", "<781px") {
-    .flex-underline .wp-block-column {
-        flex-basis: 0 !important;
-        flex-grow: 1;
-    }
+  .flex-underline .wp-block-column {
+    flex-basis: 0 !important;
+    flex-grow: 1;
+  }
 }

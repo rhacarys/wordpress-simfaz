@@ -28,7 +28,6 @@ get_header(); ?>
     </div>
 
     <div class="col-2">
-      <div class="spacer"></div>
       <div class="data pad-right">
         <?php the_content(); ?>
       </div>

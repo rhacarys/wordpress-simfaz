@@ -18,11 +18,3 @@ gulp.task('default', async function () {
 
         .pipe(gulp.dest('./assets/css/'))
 });
-
-
-//gulp.task('watch', function () {
-//    gulp.watch('./src/sass/**/*.scss', gulp.series('styles'));
-//});
-
-//gulp.task('default', gulp.parallel('styles', 'watch'));
-

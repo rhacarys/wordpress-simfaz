@@ -1,73 +1,69 @@
 @include media(">desktop") {
-    .pad-left {
-        padding-left: $mobile-margin;
-    }
-    
-    .pad-right {
-        padding-right: $mobile-margin;
-    }
+  .pad-left {
+    padding-left: $mobile-margin;
+  }
 
-    .desktop-flex {
-        display: flex;
-    }
-    
-    .col-2 .spacer {
-        display: block;
-    }
+  .pad-right {
+    padding-right: $mobile-margin;
+  }
+
+  .desktop-flex {
+    display: flex;
+  }
 }
 
 @include media(">1200px") {
-    .pad-left {
-        padding-left: $desktop-margin;
-    }
-    
-    .pad-right {
-        padding-right: $desktop-margin;
-    }
+  .pad-left {
+    padding-left: $desktop-margin;
+  }
+
+  .pad-right {
+    padding-right: $desktop-margin;
+  }
 }
 
 @include media(">1400px") {
-    .site-header .site-menu {
-        padding-left: 10%;
-    }
+  .site-header .site-menu {
+    padding-left: 10%;
+  }
 
-    .col-1 .data .title {
-        font-size: 3.5em;
-    }
+  .col-1 .data .title {
+    font-size: 3.5em;
+  }
 }
 
 @include media(">1800px") {
-    html {
-        font-size: 1.2em;
-    }
+  html {
+    font-size: 1.2em;
+  }
 
-    .pad-left {
-        padding-left: $desktop-margin * 2;
-    }
-    
-    .pad-right {
-        padding-right: $desktop-margin * 2;
-    }
-    
-    .site-header .site-menu {
-        padding-left: 15%;
-    }
-    
-    .col-1 .data {
-        font-size: 1.1em;
-    }
+  .pad-left {
+    padding-left: $desktop-margin * 2;
+  }
+
+  .pad-right {
+    padding-right: $desktop-margin * 2;
+  }
+
+  .site-header .site-menu {
+    padding-left: 15%;
+  }
+
+  .col-1 .data {
+    font-size: 1.1em;
+  }
 }
 
 @include media(">2400px") {
-    html {
-        font-size: 1.3em;
-    }
+  html {
+    font-size: 1.3em;
+  }
 
-    .pad-left {
-        padding-left: $desktop-margin * 4;
-    }
-    
-    .pad-right {
-        padding-right: $desktop-margin * 4;
-    }
+  .pad-left {
+    padding-left: $desktop-margin * 4;
+  }
+
+  .pad-right {
+    padding-right: $desktop-margin * 4;
+  }
 }
